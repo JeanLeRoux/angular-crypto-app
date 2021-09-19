@@ -1,4 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from './news.service';
+
+interface CryptoNews{
+  cover: string;
+	meta: {
+    createdAt: string;
+    sourceUrl: string;
+    subtitle: string;
+    title: string
+  }
+}
 
 @Component({
   selector: 'app-news',
@@ -6,10 +17,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.sass']
 })
 export class NewsComponent implements OnInit {
-
-  constructor() { }
+  articles: CryptoNews[] = [];
+  constructor(private service: NewsService) { }
 
   ngOnInit(): void {
+    this.service.getCryptoNews().subscribe((data:any)=>{
+      this.articles = data.data;
+      console.log(data.data)
+    })
   }
 
 }

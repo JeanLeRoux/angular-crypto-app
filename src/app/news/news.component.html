@@ -1,1 +1,14 @@
-<p>news works!</p>
+<div class="container">
+  <h1 class="heading">News</h1>
+  <div
+    fxLayout="column"
+    fxLayout.xs="column"
+    fxLayoutGap="20px"
+    fxLayoutAlign="space-between center"
+  >
+    <div class="card" *ngFor="let article of articles" fxFlex="30">
+      <img src="{{ article.cover }}" alt="" />
+      <h1 class="card-heading">{{ article.meta.title }}</h1>
+    </div>
+  </div>
+</div>

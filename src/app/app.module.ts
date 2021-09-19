@@ -5,8 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DataService } from './home/home.service';
+import { CryptoMetaService } from './home/home.service';
 import { NewsComponent } from './news/news.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { NewsService } from './news/news.service';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,13 @@ import { NewsComponent } from './news/news.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
-  providers: [DataService],
+  providers: [
+    CryptoMetaService,
+    NewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
