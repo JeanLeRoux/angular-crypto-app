@@ -14,7 +14,7 @@ interface CryptoNews{
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.sass']
+  styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
   articles: CryptoNews[] = [];
