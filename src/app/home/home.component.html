@@ -1,3 +1,7 @@
-<div *ngFor="let article of articles">
-    <div>{{article.id}}</div>
+<div *ngFor="let crypto of cryptos" class="container">
+    <div class="crypto-container" >
+        <img src="{{crypto.iconUrl}}" alt="{{crypto.name}}"/>
+        <h1>{{crypto.name}}</h1>
+    </div>
+    
 </div>

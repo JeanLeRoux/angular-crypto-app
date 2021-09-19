@@ -1,16 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 @Injectable()
-export class NewsService {
+export class DataService {
+  private REST_API_SERVER = "http://localhost:8000";
   constructor(
     private http: HttpClient
   ) {}
   getCryptoMeta() {
-      let cryptoMeta;
-      let value = this.http.get("http://localhost:8000/CryptoMeta");
-      value.subscribe((data:any) => {
-        cryptoMeta = data})
-        console.log(cryptoMeta)  
-        return cryptoMeta;
+    return this.http.get(this.REST_API_SERVER+'/CryptoMeta')
   }
 }
