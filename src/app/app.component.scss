@@ -7,6 +7,14 @@
     justify-content: space-between;
   }
 
+@mixin userselect() {
+  cursor: pointer;
+  user-select: none;
+  &:focus{
+    outline: 0 !important;
+  };
+}
+
 nav {
   width: 100%;
   background-color: rgb(39, 39, 41);
@@ -17,6 +25,7 @@ h1{
   font-family: 'Roboto', sans-serif;
   color: #fff;
   margin-left: 40px;
+  @include userselect();
 }
 
 .nav-option-container{
@@ -28,8 +37,8 @@ h1{
 h4{
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  cursor: pointer;
+  @include userselect();
   &:hover{
     color: #949494;
-  }
+  };
 }

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CryptoMetaService } from './home.service';
+
 interface CryptoMeta{
   id: number;
 	name: string;
+  slug: string;
 	symbol: string;
 	cmcRank: number;
 	iconUrl: string;
@@ -20,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getCryptoMeta().subscribe((data: any) => {
-      this.cryptos = data
-  })
+        this.cryptos = data
+    })
   }
 }

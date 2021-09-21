@@ -2,7 +2,7 @@
 <div class="container">
 <h1 class="heading">Top 100 Currencies</h1>
 <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="space-between center">
-    <div class="card" *ngFor="let crypto of cryptos" fxFlex="30" routerLink="/crypto/{{crypto.name}}">
+    <div class="card" *ngFor="let crypto of cryptos" fxFlex="30" routerLink="/crypto/{{crypto.slug}}">
         <img src="{{crypto.iconUrl}}" alt="{{crypto.name}}"/>
         <h1 class="card-heading">{{crypto.name}}</h1>
     </div>
