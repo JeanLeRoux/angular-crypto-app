@@ -20,13 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getCryptoMeta().subscribe((data: any) => {
-      console.log(data)
       this.cryptos = data
   })
   }
-
-  redirect(cryptoName: string){
-    console.log(cryptoName);
-  }
-
 }

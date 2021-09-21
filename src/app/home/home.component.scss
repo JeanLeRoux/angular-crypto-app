@@ -1,34 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-.container{
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 30px;
-    margin-bottom: 50px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.card{
-    -webkit-box-shadow: 5px 10px 15px -2px #A8A8A8; 
-    box-shadow: 5px 10px 15px -2px #A8A8A8;
-    padding: 1%;
-    border-radius: 10px;
-    display: flex;
-    margin-top: 25px;
-    flex-direction: column;
-    &:hover{
-        -webkit-box-shadow: 5px 10px 10px 2px #A8A8A8; 
-        box-shadow: 5px 10px 10px 2px #A8A8A8;
-    }
+.card {
+  -webkit-box-shadow: 5px 10px 15px -2px #a8a8a8;
+  box-shadow: 5px 10px 15px -2px #a8a8a8;
+  padding: 1%;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  &:hover {
+    -webkit-box-shadow: 5px 10px 10px 2px #a8a8a8;
+    box-shadow: 5px 10px 10px 2px #a8a8a8;
+  }
 }
 
-img{
-    align-self: center;
-    width: 20%;
+img {
+  align-self: center;
+  width: 20%;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
-.heading{
-    font-family: 'Roboto', sans-serif;
+.heading {
+  font-family: "Roboto", sans-serif;
 }
 
-.card-heading{
-    align-self: center;
+.card-heading {
+  align-self: center;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }

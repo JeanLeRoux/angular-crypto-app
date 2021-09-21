@@ -23,7 +23,6 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.service.getCryptoNews().subscribe((data:any)=>{
       this.articles = data.data;
-      console.log(data.data)
     })
   }
 

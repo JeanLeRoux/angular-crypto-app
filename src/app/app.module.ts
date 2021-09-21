@@ -9,12 +9,16 @@ import { CryptoMetaService } from './home/home.service';
 import { NewsComponent } from './news/news.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { NewsService } from './news/news.service';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NewsComponent
+    NewsComponent,
+    SpinnerComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
