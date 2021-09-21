@@ -7,13 +7,17 @@
 }
 
 .card{
-    -webkit-box-shadow: 4px 6px 10px 1px #949494; 
-    box-shadow: 4px 6px 10px 1px #949494;
+    -webkit-box-shadow: 5px 10px 15px -2px #A8A8A8; 
+    box-shadow: 5px 10px 15px -2px #A8A8A8;
     padding: 1%;
     border-radius: 10px;
     display: flex;
     margin-top: 25px;
     flex-direction: column;
+    &:hover{
+        -webkit-box-shadow: 5px 10px 10px 2px #A8A8A8; 
+        box-shadow: 5px 10px 10px 2px #A8A8A8;
+    }
 }
 
 img{
