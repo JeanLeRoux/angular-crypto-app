@@ -7,7 +7,10 @@ export class DetailsService {
   constructor(
     private http: HttpClient
   ) {}
-  getCryptoNews() {
-    return this.http.get(this.REST_API_SERVER+'/CryptoNews')
+  getCryptoNews(crypto: string) {
+    return this.http.get(this.REST_API_SERVER+'/CryptoNews', {
+      params: {
+        crypto: crypto
+      }})
   }
 }

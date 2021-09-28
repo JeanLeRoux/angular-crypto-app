@@ -22,8 +22,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')!;
-    console.log(id);
-    this.service.getCryptoNews().subscribe((data:any)=>{
+    this.service.getCryptoNews(id).subscribe((data:any)=>{
       this.articles = data.data;
     })
   }
