@@ -11,6 +11,7 @@ import { NewsService } from './news/news.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './details/details.service';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DetailsService } from './details/details.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule  
+    FlexLayoutModule,
+    HighchartsChartModule
   ],
   providers: [
     CryptoMetaService,
