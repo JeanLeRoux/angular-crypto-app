@@ -2,14 +2,19 @@
 .container{
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    
+}
+
+.tab-container{
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .card{
     -webkit-box-shadow: 5px 10px 15px -2px #A8A8A8; 
     box-shadow: 5px 10px 15px -2px #A8A8A8;
     padding: 2%;
+    width: 90%;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;

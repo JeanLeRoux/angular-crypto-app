@@ -1,26 +1,35 @@
-<div class="container">
-  <h1 class="heading">News</h1>
-  <div
-    fxLayout="column"
-    fxLayout.xs="column"
-    fxLayoutGap="30px"
-    fxLayoutAlign="space-between center"
-  >
-    <div class="card" *ngFor="let article of articles">
-      <img src="{{ article.cover }}" alt="" />
-      <div class="card-content">
-        <h2 class="card-heading">{{ article.meta.title }}</h2>
-        <p>{{ article.meta.subtitle }}</p>
-        <h4 class="card-date">{{ article.meta.createdAt }}</h4>
+<div class="container" *ngIf="!loading">
+  <h1 class="heading">{{cryptoName}}</h1>
+  <mat-tab-group class="tabs">
+    <mat-tab label="Details">
+      <div class="tab-container">
+        <highcharts-chart 
+          [Highcharts]="Highcharts"
+          [constructorType]="'stockChart'"
+          [options]="chartOptions"
+          style="width: 100%; height: 400px; display: block;"
+        >
+        </highcharts-chart>
       </div>
-    </div>
-  </div>
-  <h1 class="heading">Graph</h1>
-  <highcharts-chart
-    [Highcharts]="Highcharts"
-    [constructorType]="'stockChart'"
-    [options]="chartOptions"
-    style="width: 100%; height: 400px; display: block;"
-  >
-  </highcharts-chart>
+    </mat-tab>
+    <mat-tab label="News">
+      <div
+        class="tab-container"
+        fxLayout="column"
+        fxLayout.xs="column"
+        fxLayoutGap="30px"
+        fxLayoutAlign="space-between center"
+      >
+        <div class="card" *ngFor="let article of articles">
+          <img src="{{ article.cover }}" alt="" />
+          <div class="card-content">
+            <h2 class="card-heading">{{ article.meta.title }}</h2>
+            <p>{{ article.meta.subtitle }}</p>
+            <h4 class="card-date">{{ article.meta.createdAt }}</h4>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>  
 </div>
+<app-spinner *ngIf="loading"></app-spinner>

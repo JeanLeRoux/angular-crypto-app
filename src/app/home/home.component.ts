@@ -18,11 +18,13 @@ interface CryptoMeta{
 
 export class HomeComponent implements OnInit {
   cryptos: CryptoMeta[] = [];
+  loading:boolean = true;
   constructor(private service: CryptoMetaService) { }
 
   ngOnInit(): void {
     this.service.getCryptoMeta().subscribe((data: any) => {
         this.cryptos = data
+        this.loading = false;
     })
   }
 }
