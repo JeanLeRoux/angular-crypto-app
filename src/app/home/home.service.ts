@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CryptoMetaService {
-  private REST_API_SERVER = "http://localhost:8000";
+  private REST_API_SERVER = "https://go-crypto-backend.herokuapp.com";
   constructor(
     private http: HttpClient
   ) {}
