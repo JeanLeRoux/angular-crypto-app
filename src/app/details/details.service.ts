@@ -13,7 +13,10 @@ export class DetailsService {
         crypto: crypto
       }})
   }
-  getGraphData() {
-    return this.http.get(this.REST_API_SERVER+'/CryptoChart')
+  getGraphData(cryptoId: string) {
+    return this.http.get(this.REST_API_SERVER+'/CryptoChart',{
+    params: {
+      crypto: cryptoId
+    }})
   }
 }

@@ -35,14 +35,19 @@ export class DetailsComponent implements OnInit {
   cryptoName: string = "";
 
   ngOnInit(): void {
+    let name = "";
+    let id = "";
+    this.route.queryParams.subscribe(params=>{
+      name = params.name
+      id = params.id
+    })
     
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.cryptoName = id;
-    this.service.getCryptoNews(id).subscribe((data:any)=>{
+    this.cryptoName = name;
+    this.service.getCryptoNews(name).subscribe((data:any)=>{
       this.articles = data.data;
     })
 
-    this.service.getGraphData().subscribe((data:any)=>{
+    this.service.getGraphData(id).subscribe((data:any)=>{
     this.chartOptions = {
       xAxis: {
         crosshair: true
