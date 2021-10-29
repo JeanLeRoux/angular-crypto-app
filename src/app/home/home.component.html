@@ -1,6 +1,6 @@
 
 <div class="container" *ngIf="!loading">
-<h1 class="heading">Top 100 Currencies</h1>
+<h1 class="heading">Top 100 Currencies for now</h1>
 <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="space-between center">
     <div class="card" *ngFor="let crypto of cryptos" fxFlex="30" [routerLink]="['/crypto']" [queryParams]="{ name: crypto.slug, id: crypto.id}">
         <img src="{{crypto.iconUrl}}" alt="{{crypto.name}}"/>
