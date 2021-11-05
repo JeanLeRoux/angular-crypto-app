@@ -1,28 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
 .container {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 30px;
   margin-bottom: 50px;
+  @media screen and (max-width:658px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width:658px) {
+    flex-direction: column;
+  }
 }
 
 .card {
-  -webkit-box-shadow: 5px 10px 15px -2px #a8a8a8;
-  box-shadow: 5px 10px 15px -2px #a8a8a8;
+  border: 2px solid #00ADB5;
+  align-self: center;
   padding: 1%;
+  width: 280px;
   border-radius: 10px;
   display: flex;
   margin-top: 25px;
   flex-direction: column;
-  &:hover {
-    -webkit-box-shadow: 5px 10px 10px 2px #a8a8a8;
-    box-shadow: 5px 10px 10px 2px #a8a8a8;
+  &:hover{
+    background-color: #393E46;
   }
 }
 
 img {
   align-self: center;
-  width: 20%;
+  justify-self: center;
+  width: 50px;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -31,9 +46,22 @@ img {
 
 .heading {
   font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #EEEEEE;
+  font-size: 3rem;
+  @media screen and (max-width:658px) {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 .card-heading {
+  font-family: "Roboto", sans-serif;
+  justify-self: center;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #EEEEEE;
   align-self: center;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */

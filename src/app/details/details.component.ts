@@ -42,13 +42,19 @@ export class DetailsComponent implements OnInit {
       id = params.id
     })
     
-    this.cryptoName = name;
     this.service.getCryptoNews(name).subscribe((data:any)=>{
       this.articles = data.data;
     })
 
+    this.service.getCryptoDetails(id).subscribe((data:any)=>{
+      this.cryptoName = data.name;
+    })
+
     this.service.getGraphData(id).subscribe((data:any)=>{
     this.chartOptions = {
+      chart:{
+backgroundColor:"#222831",
+      },
       xAxis: {
         crosshair: true
     },

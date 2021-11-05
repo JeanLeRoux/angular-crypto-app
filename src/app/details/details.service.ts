@@ -19,4 +19,10 @@ export class DetailsService {
       crypto: cryptoId
     }})
   }
+  getCryptoDetails(cryptoId: string) {
+    return this.http.get(this.REST_API_SERVER+'/CryptoDetails',{
+    params: {
+      crypto: cryptoId
+    }})
+  }
 }

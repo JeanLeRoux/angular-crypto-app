@@ -1,18 +1,18 @@
 <div class="container" *ngIf="!loading">
-  <h1 class="heading">{{cryptoName}}</h1>
+  <span class="heading">{{cryptoName}}</span>
   <mat-tab-group class="tabs">
-    <mat-tab label="Details">
+    <mat-tab class="mat-tab-label" label="Details">
       <div class="tab-container">
         <highcharts-chart 
           [Highcharts]="Highcharts"
           [constructorType]="'stockChart'"
           [options]="chartOptions"
-          style="width: 100%; height: 400px; display: block;"
+          style="width: 90%; height: 400px; display: block;"
         >
         </highcharts-chart>
       </div>
     </mat-tab>
-    <mat-tab label="News">
+    <mat-tab class="mat-tab-label" label="News">
       <div
         class="tab-container"
         fxLayout="column"
